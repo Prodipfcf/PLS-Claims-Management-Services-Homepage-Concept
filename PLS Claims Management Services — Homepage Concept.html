@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PLS Claims Management Services — Homepage Concept</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--purple:#493078;--purple2:#5B3B8C;--gold:#C8A64B;--gold-d:#8a6d1c;--off:#FAF9F6;--white:#fff;--char:#252330;--gray:#707078;--bg:var(--off);--card:#fff;--text:#252330;--muted:#5d5d66;--line:#e6e2ea;
+--serif:"Newsreader",Georgia,"Times New Roman",serif;--sans:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17151f;--card:#211e2c;--text:#f1eff5;--muted:#b4b0c0;--line:#383348;--gold-d:#C8A64B}}
+:root[data-theme="dark"]{--bg:#17151f;--card:#211e2c;--text:#f1eff5;--muted:#b4b0c0;--line:#383348;--gold-d:#C8A64B}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--text);font:400 17px/1.65 var(--sans);overflow-x:hidden;-webkit-font-smoothing:antialiased}
+img,svg{max-width:100%}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;margin:0;letter-spacing:-.01em}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:3px;border-radius:4px}
+.wrap{width:min(1200px,100% - 48px);margin-inline:auto}
+.eyebrow{font:600 .78rem/1 var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold-d);display:flex;align-items:center;gap:12px;margin-bottom:20px}
+.eyebrow::before{content:"";width:32px;height:1px;background:currentColor}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:48px;padding:0 26px;border-radius:2px;font:600 .95rem var(--sans);text-decoration:none;border:1.5px solid transparent;cursor:pointer;transition:background .25s,color .25s,border-color .25s,transform .25s}
+.btn-gold{background:var(--gold);color:#241a3a}.btn-gold:hover{background:#d8b85c;transform:translateY(-1px)}
+.btn-line{border-color:rgba(255,255,255,.45);color:#fff}.btn-line:hover{background:rgba(255,255,255,.1);border-color:#fff}
+.btn-purple{background:var(--purple);color:#fff}.btn-purple:hover{background:var(--purple2)}
+section{padding:112px 0}
+
+/* header */
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(73,48,120,.97);backdrop-filter:blur(8px);color:#fff;border-bottom:1px solid rgba(200,166,75,.35)}
+.bar{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.mark{width:46px;height:46px;background:var(--purple);border:1.5px solid var(--gold);display:grid;place-items:center;font:600 1.1rem var(--serif);letter-spacing:.08em;color:var(--gold);text-indent:.08em;box-shadow:inset 0 0 0 3px var(--purple),inset 0 0 0 4px rgba(200,166,75,.4)}
+.logo small{display:block;font:500 .64rem/1.3 var(--sans);letter-spacing:.2em;text-transform:uppercase;color:#d9d0ea}
+.logo b{display:block;font:600 1.05rem/1.2 var(--serif);letter-spacing:.02em}
+nav ul{display:flex;gap:34px;list-style:none;margin:0;padding:0}
+nav a{text-decoration:none;font:500 .93rem var(--sans);padding:8px 0;border-bottom:1.5px solid transparent;transition:border-color .2s}
+nav a:hover{border-color:var(--gold)}
+.menu{display:none;background:none;border:1px solid rgba(255,255,255,.4);color:#fff;width:48px;height:48px;border-radius:2px;cursor:pointer}
+.menu span{display:block;width:20px;height:2px;background:#fff;margin:5px auto;transition:transform .25s,opacity .25s}
+.menu[aria-expanded=true] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+.menu[aria-expanded=true] span:nth-child(2){opacity:0}
+.menu[aria-expanded=true] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+.hdr-cta{min-height:44px;padding:0 20px;font-size:.88rem}
+
+/* hero */
+.hero{background:var(--purple);color:#fff;padding:96px 0 120px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:6px;background:linear-gradient(90deg,var(--gold),transparent 70%)}
+.hero .wrap{display:grid;grid-template-columns:1.15fr .85fr;gap:72px;align-items:center}
+.hero .eyebrow{color:var(--gold)}
+.hero h1{font-size:clamp(2.6rem,5.4vw,4.6rem);margin-bottom:26px}
+.hero h1 em{font-style:italic;color:var(--gold)}
+.hero p.lead{font-size:1.15rem;color:#e4def0;max-width:540px;margin-bottom:38px}
+.row{display:flex;flex-wrap:wrap;gap:14px}
+.file{background:var(--off);color:var(--char);padding:34px;border-top:4px solid var(--gold);box-shadow:0 30px 60px -30px rgba(0,0,0,.5);position:relative}
+.file::before{content:"";position:absolute;inset:14px -14px -14px 14px;border:1px solid rgba(200,166,75,.6);z-index:-1}
+.file h3{font-size:1.35rem;margin-bottom:6px}
+.file .sub{font-size:.82rem;color:var(--gray);margin-bottom:22px}
+.file ol{list-style:none;margin:0;padding:0}
+.file li{display:flex;gap:16px;padding:14px 0;border-top:1px solid #e3dfe8;font-size:.95rem;position:relative}
+.file li i{flex:none;width:26px;height:26px;border-radius:50%;border:1.5px solid var(--purple);display:grid;place-items:center;font:600 .72rem var(--sans);color:var(--purple);font-style:normal}
+.file li:last-child i{background:var(--purple);color:var(--gold)}
+.file li span{display:block;font-size:.8rem;color:var(--gray)}
+
+/* intro */
+.intro .wrap{display:grid;grid-template-columns:5fr 6fr;gap:80px;align-items:start}
+.intro h2{font-size:clamp(2rem,3.6vw,3.2rem)}
+.intro .big{font-family:var(--serif);font-size:clamp(1.4rem,2.2vw,1.85rem);line-height:1.4;margin-bottom:28px}
+.intro .big em{color:var(--purple2);font-style:italic}
+:root[data-theme="dark"] .intro .big em{color:var(--gold)}
+.tags{display:flex;flex-wrap:wrap;gap:10px;margin-top:30px}
+.tags span{font-size:.86rem;padding:8px 14px;border:1px solid var(--line);background:var(--card);border-radius:100px;color:var(--muted)}
+.intro .muted{color:var(--muted)}
+
+/* services */
+.services{background:#f1edf7}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .services{background:#1d1a28}}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.head h2{font-size:clamp(2rem,3.6vw,3.2rem);max-width:620px}
+.head p{max-width:400px;color:var(--muted)}
+.grid{display:grid;grid-template-columns:repeat(6,1fr);gap:20px}
+.card{background:var(--card);border:1px solid var(--line);padding:34px;position:relative;transition:transform .3s,box-shadow .3s,border-color .3s;grid-column:span 2}
+.card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -24px rgba(73,48,120,.45);border-color:var(--gold)}
+.card.w3{grid-column:span 3}
+.card.dark{background:var(--purple);color:#fff;border-color:var(--purple)}
+.card.dark p{color:#ddd5ee}
+.card svg{width:34px;height:34px;stroke:var(--gold-d);fill:none;stroke-width:1.5;margin-bottom:24px}
+.card.dark svg{stroke:var(--gold)}
+.card .n{position:absolute;top:28px;right:30px;font:500 .9rem var(--serif);color:var(--gray);letter-spacing:.1em}
+.card h3{font-size:1.5rem;margin-bottom:12px}
+.card p{color:var(--muted);font-size:.97rem}
+
+/* why */
+.why{background:var(--char);color:#fff}
+.why .wrap{display:grid;grid-template-columns:4fr 7fr;gap:80px}
+.why h2{font-size:clamp(2rem,3.6vw,3.2rem);margin-bottom:22px;position:sticky;top:120px}
+.why .eyebrow{color:var(--gold)}
+.why .l p{color:#b9b5c6}
+.item{display:grid;grid-template-columns:70px 1fr;gap:20px;padding:30px 0;border-top:1px solid rgba(255,255,255,.14)}
+.item:last-child{border-bottom:1px solid rgba(255,255,255,.14)}
+.item b{font:500 2.2rem var(--serif);color:var(--gold);line-height:1}
+.item h3{font-size:1.45rem;margin-bottom:8px}
+.item p{color:#b9b5c6;font-size:.98rem}
+
+/* approach */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:0;counter-reset:s;position:relative}
+.steps::before{content:"";position:absolute;top:27px;left:6%;right:6%;height:1px;background:var(--gold)}
+.step{padding:0 32px 0 0;position:relative}
+.step .dot{width:54px;height:54px;border-radius:50%;background:var(--bg);border:1.5px solid var(--gold);display:grid;place-items:center;font:500 1.3rem var(--serif);color:var(--purple2);margin-bottom:28px;position:relative}
+:root[data-theme="dark"] .step .dot{color:var(--gold)}
+.step h3{font-size:1.55rem;margin-bottom:12px}
+.step p{color:var(--muted);font-size:.98rem}
+.note{margin-top:48px;font-size:.88rem;color:var(--gray)}
+
+/* cta */
+.cta{background:linear-gradient(135deg,var(--purple),var(--purple2));color:#fff;text-align:center;padding:96px 0;position:relative}
+.cta::before,.cta::after{content:"";position:absolute;left:50%;width:1px;height:48px;background:var(--gold)}
+.cta::before{top:0}.cta::after{bottom:0}
+.cta h2{font-size:clamp(2rem,4vw,3.4rem);max-width:760px;margin:0 auto 18px}
+.cta p{color:#e4def0;max-width:540px;margin:0 auto 34px}
+
+/* contact */
+.contact .wrap{display:grid;grid-template-columns:4fr 6fr;gap:80px}
+.contact h2{font-size:clamp(2rem,3.6vw,3rem);margin-bottom:20px}
+.contact .muted{color:var(--muted)}
+form{background:var(--card);border:1px solid var(--line);padding:40px;border-top:4px solid var(--purple)}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.fld{margin-bottom:20px}
+label{display:block;font:600 .85rem var(--sans);margin-bottom:8px}
+input,select,textarea{width:100%;font:400 1rem var(--sans);color:var(--text);background:var(--bg);border:1.5px solid var(--line);border-radius:2px;padding:13px 14px;min-height:48px}
+textarea{min-height:140px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:3px solid rgba(200,166,75,.5);border-color:var(--purple2)}
+.err{display:none;color:#b3261e;font-size:.82rem;margin-top:6px}
+:root[data-theme="dark"] .err{color:#ff8a80}
+.fld.bad input,.fld.bad select,.fld.bad textarea{border-color:#b3261e}
+.fld.bad .err{display:block}
+.proto{font-size:.8rem;color:var(--gray);margin-top:14px}
+.ok{display:none;text-align:center;padding:40px 10px}
+.ok .tick{width:64px;height:64px;border-radius:50%;background:var(--purple);color:var(--gold);display:grid;place-items:center;margin:0 auto 22px;font-size:1.8rem}
+.ok h3{font-size:1.8rem;margin-bottom:10px}
+.ok p{color:var(--muted)}
+
+/* footer */
+footer{background:#1c1428;color:#cfc8de;padding:80px 0 36px}
+.fgrid{display:grid;grid-template-columns:5fr 3fr 3fr;gap:60px;padding-bottom:50px;border-bottom:1px solid rgba(255,255,255,.12)}
+footer h4{font:600 .78rem var(--sans);letter-spacing:.18em;text-transform:uppercase;color:var(--gold);margin:0 0 18px}
+footer ul{list-style:none;margin:0;padding:0}
+footer li{margin-bottom:10px}
+footer li a{text-decoration:none;font-size:.95rem}
+footer li a:hover{color:var(--gold)}
+footer .logo{color:#fff;margin-bottom:20px}
+footer p{font-size:.93rem;max-width:380px;margin-bottom:22px}
+.copy{padding-top:28px;font-size:.84rem;color:#9a93ad;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+.rv{opacity:0;transform:translateY(22px);transition:opacity .8s,transform .8s}
+.rv.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}.rv{opacity:1;transform:none}}
+
+@media (max-width:1024px){
+ .hero .wrap,.intro .wrap,.why .wrap,.contact .wrap{grid-template-columns:1fr;gap:48px}
+ .why h2{position:static}
+ .grid{grid-template-columns:repeat(2,1fr)}.card,.card.w3{grid-column:span 1}
+ .fgrid{grid-template-columns:1fr 1fr}.fgrid>div:first-child{grid-column:1/-1}
+ .file{max-width:520px}
+}
+@media (max-width:860px){
+ .menu{display:block}
+ .hdr-cta{display:none}
+ nav{position:absolute;top:100%;left:0;right:0;background:var(--purple);max-height:0;overflow:hidden;transition:max-height .35s}
+ nav.open{max-height:420px;border-bottom:2px solid var(--gold)}
+ nav ul{flex-direction:column;gap:0;padding:8px 24px 24px}
+ nav a{display:block;padding:16px 0;border-bottom:1px solid rgba(255,255,255,.12);font-size:1.05rem}
+ nav li.m{display:block}
+}
+@media (min-width:861px){nav li.m{display:none}}
+@media (max-width:640px){
+ section{padding:72px 0}.hero{padding:56px 0 80px}
+ .wrap{width:min(1200px,100% - 40px)}
+ .grid{grid-template-columns:1fr}
+ .steps{grid-template-columns:1fr;gap:36px}.steps::before{display:none}
+ .f2{grid-template-columns:1fr;gap:0}
+ form{padding:26px 20px}
+ .item{grid-template-columns:48px 1fr}.item b{font-size:1.7rem}
+ .fgrid{grid-template-columns:1fr;gap:36px}
+ .row .btn{width:100%}
+ .logo small{display:none}
+ .file{padding:26px 22px}.file::before{display:none}
+}
+</style>
+</head>
+<body>
+<header>
+ <div class="wrap bar">
+  <a class="logo" href="#home" aria-label="PLS Claims Management Services — home"><span class="mark" aria-hidden="true">PLS</span><span><b>Claims Management</b><small>Services</small></span></a>
+  <nav id="nav" aria-label="Main">
+   <ul>
+    <li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact Us</a></li>
+    <li class="m"><a href="#contact">Discuss Your Claims Needs</a></li>
+   </ul>
+  </nav>
+  <a class="btn btn-gold hdr-cta" href="#contact">Discuss Your Claims Needs</a>
+  <button class="menu" id="menu" aria-expanded="false" aria-controls="nav" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+ </div>
+</header>
+
+<main id="home">
+<section class="hero" aria-labelledby="h1">
+ <div class="wrap">
+  <div>
+   <div class="eyebrow">Claim management &amp; administration</div>
+   <h1 id="h1">Experienced claims management. <em>Thoughtful resolution.</em></h1>
+   <p class="lead">A full-spectrum claim-management service pairing experienced claims professionals with modern claim administration software, from the initial report through to final disposition.</p>
+   <div class="row"><a class="btn btn-gold" href="#contact">Discuss Your Claims Needs</a><a class="btn btn-line" href="#services">Explore Our Services</a></div>
+  </div>
+  <aside class="file" aria-label="Illustration of the life of a claim">
+   <h3>The life of a claim</h3>
+   <div class="sub">Managed from first report to final disposition</div>
+   <ol>
+    <li><i>1</i><div>Initial report &amp; review<span>Key defense-strategy elements identified early</span></div></li>
+    <li><i>2</i><div>Active oversight<span>Budgets, counsel activity, reserves, experts</span></div></li>
+    <li><i>3</i><div>Resolution &amp; reporting<span>Mediation, settlement, required reporting</span></div></li>
+   </ol>
+  </aside>
+ </div>
+</section>
+
+<section class="intro" id="about" aria-labelledby="h-about">
+ <div class="wrap">
+  <div class="rv"><div class="eyebrow">About PLS</div><h2 id="h-about">The right expertise to manage your claims</h2></div>
+  <div class="rv">
+   <p class="big">We work diligently and proactively to administer claims <em>proficiently and on time</em>, from initial report through to resolution and final disposition.</p>
+   <p class="muted">Our team supports professional liability claims by helping manage the moving parts that shape an outcome, so decision-makers stay informed and in control.</p>
+   <div class="tags" aria-label="Areas we help manage">
+    <span>Litigation budgets</span><span>Defense strategy</span><span>Defense attorney activity &amp; spending</span><span>Reserve-setting</span><span>Medical records review</span><span>Expert retention</span><span>Mediation &amp; settlements</span><span>Loss runs</span>
+   </div>
+  </div>
+ </div>
+</section>
+
+<section class="services" id="services" aria-labelledby="h-serv">
+ <div class="wrap">
+  <div class="head rv"><div><div class="eyebrow">Services</div><h2 id="h-serv">Focused support across the life of a claim</h2></div><p>Practical services for professional liability claims, delivered with attention to detail.</p></div>
+  <div class="grid">
+   <article class="card w3 dark rv"><span class="n">01</span><svg viewBox="0 0 24 24"><path d="M6 3h9l4 4v14H6z"/><path d="M14 3v5h5M9 13h7M9 17h5"/></svg><h3>Claims Administration &amp; Litigation Management</h3><p>Hands-on administration of each claim, with oversight of litigation activity, defense strategy and coordination with defense counsel.</p></article>
+   <article class="card w3 rv"><span class="n">02</span><svg viewBox="0 0 24 24"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><path d="M9 12l2 2 4-4"/></svg><h3>Risk Management</h3><p>Support that helps organizations understand exposure and respond thoughtfully to claims.</p></article>
+   <article class="card rv"><span class="n">03</span><svg viewBox="0 0 24 24"><path d="M4 20V10M10 20V4M16 20v-8M22 20H2"/></svg><h3>Claims Reporting &amp; Compliance</h3><p>Claim reports, plus handling of state and federal reporting requirements and releases where applicable.</p></article>
+   <article class="card rv"><span class="n">04</span><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v10M15 9.5c-.5-1-1.600-1.500-3-1.500-1.700 0-3 .8-3 2s1.300 1.700 3 2 3 .8 3 2-1.300 2-3 2c-1.400 0-2.500-.5-3-1.500"/></svg><h3>Litigation Budgeting &amp; Cost Containment</h3><p>Defense counsel and other fees reviewed, managed and approved throughout the life of a claim.</p></article>
+   <article class="card rv"><span class="n">05</span><svg viewBox="0 0 24 24"><path d="M3 12h5l3-4 3 8 3-4h4"/></svg><h3>Mediation &amp; Private Claim Resolution</h3><p>Preparation and negotiation support for mediation, settlement and private resolution of claims.</p></article>
+   <article class="card w3 rv" style="grid-column:span 6"><span class="n">06</span><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M16 16l5 5"/></svg><h3>Trial Monitoring &amp; Claims Audits</h3><p>Monitoring of cases heading to trial and audits that give a clear view of how claims are being handled.</p></article>
+  </div>
+ </div>
+</section>
+
+<section class="why" aria-labelledby="h-why">
+ <div class="wrap">
+  <div class="l rv"><div class="eyebrow">Why PLS</div><h2 id="h-why">Reasons to choose our service</h2><p>Senior-level attention and a proactive approach to every file.</p></div>
+  <div class="rv">
+   <div class="item"><b>01</b><div><h3>Experienced claims specialists</h3><p>Our claim specialists are senior-level experts who give each case the due diligence and specialized attention it needs.</p></div></div>
+   <div class="item"><b>02</b><div><h3>Proactive early resolution</h3><p>Where possible, we work to resolve claims before they escalate to litigation by identifying key defense-strategy elements early.</p></div></div>
+   <div class="item"><b>03</b><div><h3>Strategic litigation oversight</h3><p>Extensive experience managing litigated claims, including budgets, activity, and collaboration with defense counsel on mediation and strategy.</p></div></div>
+   <div class="item"><b>04</b><div><h3>Cost-conscious administration</h3><p>Costs and fees are carefully managed on every claim, allowing proactive cost management as far as each client wishes.</p></div></div>
+   <div class="item"><b>05</b><div><h3>Reporting &amp; compliance support</h3><p>We handle state and federal reporting requirements and releases where applicable.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<section aria-labelledby="h-app">
+ <div class="wrap">
+  <div class="head rv"><div><div class="eyebrow">Our approach</div><h2 id="h-app">From initial report to final disposition</h2></div></div>
+  <div class="steps rv">
+   <div class="step"><div class="dot">1</div><h3>Initial claim review</h3><p>Each claim is reviewed from the first report, with attention to the key defense-strategy elements that can support early resolution.</p></div>
+   <div class="step"><div class="dot">2</div><h3>Strategic management</h3><p>Litigation budgets, defense counsel activity, reserves, records and experts are managed with proactive oversight.</p></div>
+   <div class="step"><div class="dot">3</div><h3>Resolution &amp; reporting</h3><p>Mediation, settlement and any required reporting are handled through to the claim’s final disposition.</p></div>
+  </div>
+ </div>
+</section>
+
+<section class="cta" aria-labelledby="h-cta">
+ <div class="wrap rv">
+  <h2 id="h-cta">Let’s talk about your claims management needs</h2>
+  <p>Tell us about your situation and we’ll continue the conversation.</p>
+  <a class="btn btn-gold" href="#contact">Go to the contact form</a>
+ </div>
+</section>
+
+<section class="contact" id="contact" aria-labelledby="h-con">
+ <div class="wrap">
+  <div class="rv"><div class="eyebrow">Contact Us</div><h2 id="h-con">Discuss your claims needs</h2><p class="muted">Share a few details about your organization and what you’re looking for. This form is a design prototype and does not send or store any information.</p></div>
+  <div class="rv">
+   <form id="form" novalidate>
+    <div class="f2">
+     <div class="fld"><label for="name">Full Name</label><input id="name" name="name" autocomplete="name" required><div class="err">Please enter your full name.</div></div>
+     <div class="fld"><label for="email">Business Email</label><input id="email" name="email" type="email" autocomplete="email" required><div class="err">Please enter a valid email address.</div></div>
+    </div>
+    <div class="f2">
+     <div class="fld"><label for="org">Company or Organization</label><input id="org" name="org" autocomplete="organization" required><div class="err">Please enter your organization.</div></div>
+     <div class="fld"><label for="type">Type of Inquiry</label><select id="type" name="type" required><option value="">Select…</option><option>Claims administration &amp; litigation management</option><option>Risk management</option><option>Reporting &amp; compliance</option><option>Cost containment</option><option>Mediation &amp; resolution</option><option>Trial monitoring &amp; audits</option><option>Other</option></select><div class="err">Please choose an inquiry type.</div></div>
+    </div>
+    <div class="fld"><label for="msg">Message</label><textarea id="msg" name="msg" required></textarea><div class="err">Please tell us a little about your needs.</div></div>
+    <button class="btn btn-purple" type="submit">Send Inquiry</button>
+    <p class="proto">Prototype only: nothing is submitted or transmitted.</p>
+   </form>
+   <div class="ok" id="ok" role="status" tabindex="-1"><div class="tick" aria-hidden="true">✓</div><h3>Thank you for your message</h3><p>In the live website, your inquiry would now be on its way. This is a demonstration; no information was sent.</p></div>
+  </div>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="fgrid">
+   <div><a class="logo" href="#home"><span class="mark" aria-hidden="true">PLS</span><span><b>Claims Management</b><small>Services</small></span></a>
+    <p>Full-spectrum insurance claim management and administration, delivered by experienced claims professionals.</p>
+    <a class="btn btn-gold" href="#contact">Discuss Your Claims Needs</a></div>
+   <div><h4>Explore</h4><ul><li><a href="#home">Home</a></li><li><a href="#about">About Us</a></li><li><a href="#services">Services</a></li><li><a href="#contact">Contact Us</a></li></ul></div>
+   <div><h4>Services</h4><ul><li><a href="#services">Claims administration</a></li><li><a href="#services">Risk management</a></li><li><a href="#services">Reporting &amp; compliance</a></li><li><a href="#services">Mediation</a></li></ul></div>
+  </div>
+  <div class="copy"><span>© <span id="yr">2026</span> PLS Claims Management Services. All rights reserved.</span><span>Homepage design concept</span></div>
+ </div>
+</footer>
+
+<script>
+(function(){
+ var nav=document.getElementById('nav'),btn=document.getElementById('menu');
+ function close(){nav.classList.remove('open');btn.setAttribute('aria-expanded','false')}
+ btn.addEventListener('click',function(){var o=nav.classList.toggle('open');btn.setAttribute('aria-expanded',o)});
+ nav.addEventListener('click',function(e){if(e.target.tagName==='A')close()});
+ document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+ document.getElementById('yr').textContent=new Date().getFullYear();
+ var rv=document.querySelectorAll('.rv');
+ if('IntersectionObserver' in window){var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}})},{threshold:.12});rv.forEach(function(el){io.observe(el)})}else{rv.forEach(function(el){el.classList.add('in')})}
+ var f=document.getElementById('form');
+ f.addEventListener('submit',function(e){
+  e.preventDefault();var ok=true,first=null;
+  f.querySelectorAll('.fld').forEach(function(w){
+   var i=w.querySelector('input,select,textarea'),v=i.value.trim(),good=!!v;
+   if(i.type==='email')good=/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v);
+   w.classList.toggle('bad',!good);i.setAttribute('aria-invalid',!good);
+   if(!good){ok=false;if(!first)first=i}
+  });
+  if(!ok){first.focus();return}
+  f.style.display='none';var o=document.getElementById('ok');o.style.display='block';o.focus();
+ });
+})();
+</script>
+</body>
+</html>
